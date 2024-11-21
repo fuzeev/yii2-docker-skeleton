@@ -2,8 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '',
     'charset' => 'utf8',
+    'enableSchemaCache' => true,
+    'dsn' => getenv('PG_DSN')??'pgsql:host=localhost;dbname=skeleton',
+    'username' => getenv('PG_USER')??'skeleton',
+    'password' => getenv('PG_PASSWORD')??'123456',
 ];

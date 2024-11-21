@@ -1,0 +1,7 @@
+services:
+  php:
+    image: yiisoftware/yii2-php:8.2-fpm-nginx
+    volumes:
+      - ./:/app:delegated
+    ports:
+      - '81:80'
